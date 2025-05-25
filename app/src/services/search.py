@@ -47,6 +47,8 @@ class EmbeddingSearchService:
         self.index_storage = index_storage
         self.image_collection = self.index_storage.get_image_collection
         self.text_collection = self.index_storage.get_text_collection
+        print(f"Image collection count: {self.image_collection.count()}")
+        print(f"Text collection count: {self.text_collection.count()}")
 
     async def search_by_id(
         self,
