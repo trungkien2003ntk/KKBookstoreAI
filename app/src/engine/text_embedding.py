@@ -30,7 +30,8 @@ logger = logging.getLogger(__name__)
 class TextEmbeddingGenerator:
     """
     A class to generate text embeddings using a pre-trained SentenceTransformer model.
-    """    def __init__(self, device: torch.device = None):
+    """    
+    def __init__(self, device: torch.device = None):
         """
         Initializes the TextEmbeddingGenerator class.
 

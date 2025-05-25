@@ -2,31 +2,50 @@ FROM python:3.10-slim
 
 WORKDIR /app
 
+# Install dependencies needed for downloading and processing models
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    wget \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
 # Copy requirements first for better caching
 COPY ./app/requirements.txt ./
 
-# Install dependencies
-RUN pip install -r requirements.txt
-
-# Copy the model download script first
-COPY ./app/download_models.py ./
+# Add requests to the dependencies if not already present
+RUN pip install -r requirements.txt && \
+    pip install requests
 
 # Set environment variables for model caching locations
-ENV TORCH_HOME=/app/models/torch
-ENV TRANSFORMERS_CACHE=/app/models/transformers
-ENV HF_HOME=/app/models/huggingface
+ENV TORCH_HOME=/models/torch
+ENV TRANSFORMERS_CACHE=/models/transformers
+ENV HF_HOME=/models/huggingface
 ENV PYTHONUNBUFFERED=1
 ENV PYTHONPATH=/app
 
-# Create model directories
-RUN mkdir -p /app/models/torch /app/models/transformers /app/models/huggingface
+# Create model directories with proper permissions
+RUN mkdir -p /models/torch/hub/checkpoints /models/transformers /models/huggingface && \
+    chmod -R 777 /models
 
-# Download models at build time
-RUN python download_models.py
+# Copy the model download script
+COPY ./app/download_models.py ./
+
+# Download models at build time with retry logic
+RUN python download_models.py || (sleep 5 && python download_models.py) || (sleep 10 && python download_models.py)
+
+# Verify the model files exist and show cache structure
+RUN echo "=== Model cache structure ===" && \
+    find /models -name "*.pth" -o -name "*.bin" -o -name "*.json" | head -20 && \
+    echo "=== Torch hub structure ===" && \
+    ls -la /models/torch/hub/ || echo "No torch hub directory" && \
+    echo "=== HuggingFace cache structure ===" && \
+    ls -la /models/huggingface/ || echo "No HF cache directory"
 
 # Copy the rest of the application
 COPY ./app .
 
-EXPOSE 8000
+# Make sure we run with access to the model cache
+RUN chmod -R 755 /models
 
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+EXPOSE 7860
+
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "7860"]

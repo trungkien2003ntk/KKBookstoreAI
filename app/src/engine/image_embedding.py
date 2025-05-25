@@ -45,11 +45,15 @@ class ImageEmbeddingGenerator:
         self.device = device or torch.device(
             "cuda" if torch.cuda.is_available() else "cpu"
         )
+        
         try:
             logger.info(f"Loading pre-downloaded image model: {MODEL_REPOSITORY}/{MODEL_NAME}")
+            # Use pretrained=True to automatically load cached weights
             self.model = torch.hub.load(
                 repo_or_dir=MODEL_REPOSITORY,
-                model=MODEL_NAME
+                model=MODEL_NAME,
+                pretrained=True,  # This will use cached weights if available
+                force_reload=False  # Don't force reload, use cache
             ).to(self.device)
             logger.info("Image model loaded successfully")
         except Exception as error:
