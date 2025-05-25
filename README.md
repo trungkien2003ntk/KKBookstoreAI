@@ -91,13 +91,6 @@ docker build -t bookstore-ai .
 docker run -p 8000:8000 bookstore-ai
 ```
 
-### Production Deployment
-
-We provide multiple deployment options:
-
--   **Azure Container Apps**: [Azure Portal Guide](Azure-Portal-Deployment-Guide.md)
--   **Alternative platforms**: [Easy Deployment Options](EASY_DEPLOYMENT_OPTIONS.md)
-
 ## 🔧 API Endpoints
 
 ### Health & Monitoring
