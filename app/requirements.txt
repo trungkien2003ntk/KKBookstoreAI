@@ -1,5 +1,5 @@
 chromadb==1.0.8
-fastapi==0.115.12
+fastapi==0.115.9
 Pillow==11.2.1
 python-dotenv==1.1.0
 sentence_transformers==4.1.0

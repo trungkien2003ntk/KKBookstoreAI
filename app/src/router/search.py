@@ -11,6 +11,10 @@ from fastapi import (
 )
 from src.services.service import ServiceManager
 from src.dependencies.service_dependency import get_service
+from pydantic import BaseModel
+
+class ImageSearchRequest(BaseModel):
+    base64_image: str
 
 # Define the router
 product_router = APIRouter(
@@ -74,11 +78,11 @@ async def search_by_id(
 @product_router.post(
     '/related-by-image',
     status_code=status.HTTP_200_OK,
-    # response_model=List[str],
+    response_model=List[str],
     description="Search for relevant products based on a base64-encoded image",
 )
 async def search_by_image_embedding(
-    base64_image: str,
+    request_data: ImageSearchRequest,  # Now expecting a request body
     service: ServiceManager = Depends(get_service)
 ) -> List[str]:
     """
@@ -94,6 +98,7 @@ async def search_by_image_embedding(
     Raises:
         HTTPException: If the base64 image is invalid or an internal error occurs.
     """
+    base64_image = request_data.base64_image
     if not base64_image:
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
