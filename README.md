@@ -293,8 +293,6 @@ Enterprise-grade with auto-scaling capabilities.
 
 Good balance of simplicity and features.
 
-See [EASY_DEPLOYMENT_OPTIONS.md](EASY_DEPLOYMENT_OPTIONS.md) for detailed deployment guides.
-
 ## 🤝 Contributing
 
 1. **Fork the repository**
