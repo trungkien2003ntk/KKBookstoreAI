@@ -1,0 +1,619 @@
+{
+  "evaluation_timestamp": "2025-06-09T02:42:03.992192",
+  "environment": "Google Colab",
+  "data_source": "real_data",
+  "summary": {
+    "dataset_stats": {
+      "total_products": 2351,
+      "text_embeddings": 10,
+      "image_embeddings": 40,
+      "avg_images_per_product": 4.0
+    },
+    "text_model_performance": {
+      "category_coherence": {
+        "avg_precision_at_5": 0.04472222222222222,
+        "categories_evaluated": 24
+      },
+      "manual_queries": {
+        "queries_tested": 10,
+        "avg_top1_similarity": 0
+      }
+    },
+    "image_model_performance": {
+      "product_coherence": {
+        "avg_coherence": 0.9017087350215306,
+        "products_evaluated": 10
+      }
+    },
+    "cross_model_performance": {
+      "avg_consistency": 0.2486652890581808,
+      "std_consistency": 0.09599917485586998,
+      "individual_scores": [
+        0.2767984554988947,
+        0.18412046352731626,
+        0.28112337611057214,
+        0.3921700856036332,
+        0.10911406455048778
+      ],
+      "num_evaluated": 5
+    }
+  },
+  "detailed_results": {
+    "text_category_results": [
+      {
+        "category": "Kinh Tế",
+        "num_products": 3,
+        "avg_precision_at_k": 0.3333333333333333,
+        "individual_scores": [
+          0.6,
+          0.2,
+          0.2
+        ]
+      },
+      {
+        "category": "Dụng cụ học sinh",
+        "num_products": 10,
+        "avg_precision_at_k": 0.74,
+        "individual_scores": [
+          0.8,
+          0.8,
+          0.6,
+          0.6,
+          0.8,
+          0.8,
+          0.8,
+          0.6,
+          0.8,
+          0.8
+        ]
+      },
+      {
+        "category": "Sản Phẩm Điện Tử",
+        "num_products": 10,
+        "avg_precision_at_k": 0.0,
+        "individual_scores": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "category": "Dụng cụ văn phòng",
+        "num_products": 10,
+        "avg_precision_at_k": 0.0,
+        "individual_scores": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "category": "Đam mỹ",
+        "num_products": 10,
+        "avg_precision_at_k": 0.0,
+        "individual_scores": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "category": "Văn Hóa - Nghệ Thuật - Du Lịch",
+        "num_products": 10,
+        "avg_precision_at_k": 0.0,
+        "individual_scores": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "category": "Phong Thủy - Kinh Dịch",
+        "num_products": 10,
+        "avg_precision_at_k": 0.0,
+        "individual_scores": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "category": "Thể Dục Thể thao - Giải Trí",
+        "num_products": 10,
+        "avg_precision_at_k": 0.0,
+        "individual_scores": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "category": "Báo - Tạp Chí",
+        "num_products": 10,
+        "avg_precision_at_k": 0.0,
+        "individual_scores": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "category": "Robot - Siêu Nhân",
+        "num_products": 10,
+        "avg_precision_at_k": 0.0,
+        "individual_scores": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "category": "Thiệp",
+        "num_products": 10,
+        "avg_precision_at_k": 0.0,
+        "individual_scores": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "category": "Đồ Chơi Sơ Sinh",
+        "num_products": 10,
+        "avg_precision_at_k": 0.0,
+        "individual_scores": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "category": "Hóa Trang",
+        "num_products": 10,
+        "avg_precision_at_k": 0.0,
+        "individual_scores": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "category": "Thẻ Sưu Tập - Collectible Card",
+        "num_products": 10,
+        "avg_precision_at_k": 0.0,
+        "individual_scores": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "category": "Móc Khóa",
+        "num_products": 10,
+        "avg_precision_at_k": 0.0,
+        "individual_scores": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "category": "Phụ Kiện - Vật Liệu Trang Trí",
+        "num_products": 10,
+        "avg_precision_at_k": 0.0,
+        "individual_scores": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "category": "Quà Tặng Trang Trí Khác",
+        "num_products": 7,
+        "avg_precision_at_k": 0.0,
+        "individual_scores": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "category": "Thiếu nhi",
+        "num_products": 10,
+        "avg_precision_at_k": 0.0,
+        "individual_scores": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "category": "Tất Cả Nhóm Sản Phẩm",
+        "num_products": 3,
+        "avg_precision_at_k": 0.0,
+        "individual_scores": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "category": "Giáo khoa - Tham khảo",
+        "num_products": 10,
+        "avg_precision_at_k": 0.0,
+        "individual_scores": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "category": "Văn học",
+        "num_products": 10,
+        "avg_precision_at_k": 0.0,
+        "individual_scores": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "category": "Tâm lý - Kỹ năng sống",
+        "num_products": 10,
+        "avg_precision_at_k": 0.0,
+        "individual_scores": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "category": "Manga - Comic",
+        "num_products": 10,
+        "avg_precision_at_k": 0.0,
+        "individual_scores": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "category": "Sách học ngoại ngữ",
+        "num_products": 10,
+        "avg_precision_at_k": 0.0,
+        "individual_scores": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    ],
+    "text_query_results": [
+      {
+        "query": "sách về lập trình Python",
+        "results": [],
+        "error": "Collection expecting embedding with dimension of 768, got 384"
+      },
+      {
+        "query": "tiểu thuyết tình cảm",
+        "results": [],
+        "error": "Collection expecting embedding with dimension of 768, got 384"
+      },
+      {
+        "query": "sách kinh doanh khởi nghiệp",
+        "results": [],
+        "error": "Collection expecting embedding with dimension of 768, got 384"
+      },
+      {
+        "query": "truyện tranh manga",
+        "results": [],
+        "error": "Collection expecting embedding with dimension of 768, got 384"
+      },
+      {
+        "query": "sách học tiếng Anh",
+        "results": [],
+        "error": "Collection expecting embedding with dimension of 768, got 384"
+      },
+      {
+        "query": "văn học Việt Nam",
+        "results": [],
+        "error": "Collection expecting embedding with dimension of 768, got 384"
+      },
+      {
+        "query": "sách nấu ăn",
+        "results": [],
+        "error": "Collection expecting embedding with dimension of 768, got 384"
+      },
+      {
+        "query": "tâm lý học",
+        "results": [],
+        "error": "Collection expecting embedding with dimension of 768, got 384"
+      },
+      {
+        "query": "lịch sử thế giới",
+        "results": [],
+        "error": "Collection expecting embedding with dimension of 768, got 384"
+      },
+      {
+        "query": "sách thiếu nhi",
+        "results": [],
+        "error": "Collection expecting embedding with dimension of 768, got 384"
+      }
+    ],
+    "image_coherence_results": [
+      {
+        "product_id": "2",
+        "num_images": 4,
+        "avg_coherence": 0.915119475742274,
+        "individual_scores": [
+          0.9803856598248467,
+          0.9047782070765817,
+          0.8536139426963797,
+          0.9217000933712878
+        ]
+      },
+      {
+        "product_id": "1",
+        "num_images": 4,
+        "avg_coherence": 0.8804273643581249,
+        "individual_scores": [
+          0.8561807199819007,
+          0.895801572530486,
+          0.9632875697310513,
+          0.8064395951890612
+        ]
+      },
+      {
+        "product_id": "5",
+        "num_images": 4,
+        "avg_coherence": 0.894404714229676,
+        "individual_scores": [
+          0.8366177983131904,
+          0.9913165350245723,
+          0.8890196746858509,
+          0.8606648488950904
+        ]
+      },
+      {
+        "product_id": "10",
+        "num_images": 4,
+        "avg_coherence": 0.9120606962868013,
+        "individual_scores": [
+          0.9846559082588274,
+          0.9822427821876347,
+          0.8088484914195646,
+          0.8724956032811781
+        ]
+      },
+      {
+        "product_id": "7",
+        "num_images": 4,
+        "avg_coherence": 0.8995792571160266,
+        "individual_scores": [
+          0.982564329954325,
+          0.8359543938711275,
+          0.9156427019046232,
+          0.8641556027340308
+        ]
+      },
+      {
+        "product_id": "6",
+        "num_images": 4,
+        "avg_coherence": 0.8745444760633002,
+        "individual_scores": [
+          0.947313086823905,
+          0.8316524949228785,
+          0.9192106360641568,
+          0.8000016864422609
+        ]
+      },
+      {
+        "product_id": "9",
+        "num_images": 4,
+        "avg_coherence": 0.874249298565437,
+        "individual_scores": [
+          0.8505127511019795,
+          0.8324330423021409,
+          0.8419661423964053,
+          0.9720852584612225
+        ]
+      },
+      {
+        "product_id": "3",
+        "num_images": 4,
+        "avg_coherence": 0.924539560209479,
+        "individual_scores": [
+          0.9829593170933828,
+          0.9510063146017831,
+          0.9180213059701393,
+          0.8461713031726109
+        ]
+      },
+      {
+        "product_id": "4",
+        "num_images": 4,
+        "avg_coherence": 0.8807250459931557,
+        "individual_scores": [
+          0.8549442756850598,
+          0.8619779546210324,
+          0.9554010920991907,
+          0.85057686156734
+        ]
+      },
+      {
+        "product_id": "8",
+        "num_images": 4,
+        "avg_coherence": 0.9614374616510308,
+        "individual_scores": [
+          0.9946778850740627,
+          0.9592927042513799,
+          0.9999435445992395,
+          0.891835712679441
+        ]
+      }
+    ],
+    "cross_model_results": {
+      "avg_consistency": 0.2486652890581808,
+      "std_consistency": 0.09599917485586998,
+      "individual_scores": [
+        0.2767984554988947,
+        0.18412046352731626,
+        0.28112337611057214,
+        0.3921700856036332,
+        0.10911406455048778
+      ],
+      "num_evaluated": 5
+    }
+  },
+  "recommendations": [
+    "Review detailed results for each category",
+    "Focus on categories with low coherence scores",
+    "Consider fine-tuning models for poor-performing areas",
+    "Implement A/B testing for model improvements",
+    "Set up production monitoring"
+  ]
+}
